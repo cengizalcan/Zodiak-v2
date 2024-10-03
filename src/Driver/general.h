@@ -37,8 +37,8 @@
 static RGB box_color = { 255.0f, 0.0f, 0.0f };
 
 static float aimbot_smooth = 2.f;
-static int aimbot_fov = 50;
-static float aimposition = 20.f;
+static int aimbot_fov = 25;
+static float aimposition = 10.f;
 
 /* Global variables */
 static CHAR* gProcessName = "hl.exe";
