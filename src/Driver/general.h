@@ -16,28 +16,32 @@
 
 // change these if aimbot points below or higher than player head
 // or want to make bigger esp box or something
-#define AIMBOT_HEAD           20.f      // Head position (relatively of the player origin)
-#define ESP_BOX_BOTTOM        30.f      // Box bottom position (relatively of the player origin) 
-#define ESP_BOX_TOP           25.f      // Box top position (relatively of the player origin)
+#define AIMBOT_HEAD           aimposition		// Head position (relatively of the player origin)
+#define ESP_BOX_BOTTOM        30.f				// Box bottom position (relatively of the player origin) 
+#define ESP_BOX_TOP           25.f				// Box top position (relatively of the player origin)
 
 #define ESP_TOGGLE_KEY        0x76		// F7
 #define AIMBOT_TOGGLE_KEY     0x75		// F6
 
-#define SMOOTH_UP_KEY         0x26		// VK_UP
-#define SMOOTH_DOWN_KEY       0x28		// VK_DOWN
-#define FOV_UP_KEY            0x27		// VK_RIGHT
-#define FOV_DOWN_KEY          0x25		// VK_LEFT
+#define SMOOTH_UP_KEY         0x21		// VK_PRIOR
+#define SMOOTH_DOWN_KEY       0x22		// VK_NEXT
+#define FOV_UP_KEY            0x24		// VK_HOME
+#define FOV_DOWN_KEY          0x23		// VK_END
 
 #define ONLY_ENEMIES_KEY      0x77		// F8
 
+#define AIMHEADPOSITIONKEY    0x6D		// VK_SUBTRACT
+#define AIMCHESTPOSITIONKEY   0x6B		// VK_ADD
+#define AIMSTOMACHPOSITIONKEY 0x2E		// VK_NUMPADDEL 
+
 static RGB box_color = { 255.0f, 0.0f, 0.0f };
 
-static float aimbot_smooth = 3.f;
-static int aimbot_fov = 100;
-
+static float aimbot_smooth = 2.f;
+static int aimbot_fov = 50;
+static float aimposition = 20.f;
 
 /* Global variables */
-static CHAR* gProcessName = "hl.exe";;
+static CHAR* gProcessName = "hl.exe";
 PEPROCESS gProcess;
 ULONG64 gPid;
 

@@ -283,7 +283,7 @@ void HandleKeyInputs()
 			count++;
 			if (count == 1)
 			{
-				aimbot_smooth += 0.1f;
+				aimbot_smooth += 1.0f;
 			}
 		}
 		else
@@ -298,9 +298,9 @@ void HandleKeyInputs()
 		if (NtUserGetAsyncKeyState(SMOOTH_DOWN_KEY)) // VK_DOWN
 		{
 			count++;
-			if (aimbot_smooth > 1.0 && count == 1)
+			if (aimbot_smooth > 1.0f && count == 1)
 			{
-				aimbot_smooth -= 0.1f;
+				aimbot_smooth -= 1.0f;
 			}
 		}
 		else
@@ -312,12 +312,12 @@ void HandleKeyInputs()
 	{
 		static count = 0;
 		/* Fov Increase */
-		if (NtUserGetAsyncKeyState(FOV_UP_KEY)) // VK_UP
+		if (NtUserGetAsyncKeyState(FOV_UP_KEY)) // VK_RIGHT
 		{
 			count++;
-			if (count == 0) 
+			if (count == 1) 
 			{
-				aimbot_fov += 10;
+				aimbot_fov += 25;
 			}
 		}
 		else
@@ -329,12 +329,63 @@ void HandleKeyInputs()
 	{
 		static count = 0;
 		/* Fov Decrease  */
-		if (NtUserGetAsyncKeyState(FOV_DOWN_KEY)) // VK_DOWN
+		if (NtUserGetAsyncKeyState(FOV_DOWN_KEY)) // VK_LEFT
 		{
 			count++;
-			if (aimbot_fov > 1 && count == 1)
+			if (aimbot_fov > 25 && count == 1)
 			{
-				aimbot_fov -= 10;
+				aimbot_fov -= 25;
+			}
+		}
+		else
+		{
+			count = 0;
+		}
+	}
+
+	{
+		static count = 1;
+		/* Aim Head Position */
+		if (NtUserGetAsyncKeyState(AIMHEADPOSITIONKEY)) // VK_SUBTRACT
+		{
+			count++;
+			if (count == 1)
+			{
+				aimposition = 20.f;
+			}
+		}
+		else
+		{
+			count = 0;
+		}
+	}
+
+	{
+		static count = 1;
+		/* Aim Chest Position */
+		if (NtUserGetAsyncKeyState(AIMCHESTPOSITIONKEY)) // VK_ADD
+		{
+			count++;
+			if (count == 1)
+			{
+				aimposition = 10.f;
+			}
+		}
+		else
+		{
+			count = 0;
+		}
+	}
+
+	{
+		static count = 1;
+		/* Aim Stomach Position */
+		if (NtUserGetAsyncKeyState(AIMSTOMACHPOSITIONKEY)) // VK_NUMPADDEL
+		{
+			count++;
+			if (count == 1)
+			{
+				aimposition = 0.f;
 			}
 		}
 		else
