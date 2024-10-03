@@ -25,10 +25,16 @@ Check out [USAGE.md](USAGE.md) for detailed instruction.
 - **F6**: Toggle Aimbot
 - **F7**: Toggle ESP
 - **F8**: Toggle "Only Enemies" Mode
-- **Arrow Right/Left**: Adjust FOV
-- **Arrow Up/Down**: Adjust Smooth
+- **Home**: Adjust FOV+  (Default: 25, once key press plus 25)
+- **End**: Adjust FOV- (Minumum: 25, once key press minus 25)
+- **PgUP**: Adjust Smooth+ (Default: 2, once key press plus 1)
+- **PgDown**: Adjust Smooth- (Minumum: 1, once key press minus 1)
+- **Numpad -**: Aim Head
+- **Numpad +**: Aim Chest
+- **Numpad Del**: Aim Stomach
 
 
 ## Credits
+- Developer Page: https://github.com/3a1/Zodiak
 - [Ekknod](https://github.com/ekknod) for the simple and effective GDI implementation, mouse callback trick, and overall for all his publicly available projects, especially the EC project, which I believe has one of the best structures I've seen in external cheats.
 - [Unmaewei](https://github.com/unmaewei) for his Full Kernel Driver Cheat. I borrowed some general driver operations from there.
