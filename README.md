@@ -27,7 +27,7 @@ Check out [USAGE.md](USAGE.md) for detailed instruction.
 - **F8**: Toggle "Only Enemies" Mode
 - **Home**: Adjust FOV+  (Default: 25, once key press plus 25)
 - **End**: Adjust FOV- (Minumum: 25, once key press minus 25)
-- **PgUP**: Adjust Smooth+ (Default: 2, once key press plus 1)
+- **PgUp**: Adjust Smooth+ (Default: 2, once key press plus 1)
 - **PgDown**: Adjust Smooth- (Minumum: 1, once key press minus 1)
 - **Numpad -**: Aim Head
 - **Numpad +**: Aim Chest
