@@ -19,8 +19,14 @@ In the end, it’s similar to ekknod's EC cheat but adapted for CS 1.6, because 
 - **NoRecoil** (Beta version)
 
 ## Usage
-Since this cheat is a kernel driver, you'll need to load it. I recommend using [kdmapper](https://github.com/TheCruZ/kdmapper) as it very easy to use. If you prefer, you can also load it just in test mode.
-Check out [USAGE.md](USAGE.md) for detailed instruction.
+1) Download zip file and extract.
+2) Open Test ON.bat file and reboot computer.
+3) Open Zodiak.bat file. Hack is activated.
+4) If you want disable test signing mode, open Test OFF.bat file and reboot computer.
+
+## Note
+This cheat after opened, cannot terminate. You should reboot computer for terminate.
+!!! You only need to open the Zodiak.bat file once. If you open it again, you will get a blue screen error. !!!
 
 ### Default Keybinds
 - **F6**: Toggle Aimbot
