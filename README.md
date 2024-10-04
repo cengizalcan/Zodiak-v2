@@ -44,13 +44,15 @@ In the end, it’s similar to ekknod's EC cheat but adapted for CS 1.6, because 
 - **F6**: Toggle Aimbot
 - **F7**: Toggle ESP
 - **F8**: Toggle "Only Enemies" Mode
+- **F9 or DEL**: Toggle "NoSpread" Mode (Fast or Slow slide down)
+- **F10**: Turn OFF NoSpread Mode
 - **Home**: Adjust FOV+  (Default: 50, once key press plus 25)
 - **End**: Adjust FOV- (Minumum: 25, once key press minus 25)
 - **PgUp**: Adjust Smooth+ (Default: 5, once key press plus 1)
 - **PgDown**: Adjust Smooth- (Minumum: 1, once key press minus 1)
 - **Numpad -**: Aim Head (Default)
 - **Numpad +**: Aim Chest
-- **Arrow Right**: Aim Rifle settings (Enable NoRecoil, Aim Position: Head, AimFov: 100, AimSmooth: 6)
+- **Arrow Right**: Aim Rifle settings (Enable NoRecoil, Aim Position: Head, AimFov: 100, AimSmooth: 5)
 - **Arrow Left**: Aim SMG settings (Disable NoRecoil, Aim Position: Head, AimFov: 100, AimSmooth: 4)
 - **Arrow Up**: Aim AWP settings (Disable NoRecoil, Aim Position: Chest, AimFov: 100, AimSmooth: 2)
 - **Arrow Down**: Aim Pistol settings (Enable NoRecoil, Aim Position: Head, AimFov: 100, AimSmooth: 3)
