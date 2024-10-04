@@ -50,7 +50,7 @@ In the end, it’s similar to ekknod's EC cheat but adapted for CS 1.6, because 
 - **PgDown**: Adjust Smooth- (Minumum: 1, once key press minus 1)
 - **Numpad -**: Aim Head (Default)
 - **Numpad +**: Aim Chest
-- **Arrow Right**: Aim Rifle settings (Aim Position: Head, AimFov: 100, AimSmooth: 5)
+- **Arrow Right**: Aim Rifle settings (Aim Position: Head, AimFov: 100, AimSmooth: 6)
 - **Arrow Left**: Aim SMG settings (Aim Position: Head, AimFov: 100, AimSmooth: 4)
 - **Arrow Up**: Aim AWP settings (Aim Position: Chest, AimFov: 100, AimSmooth: 2)
 - **Arrow Down**: Aim Pistol settings (Aim Position: Head, AimFov: 100, AimSmooth: 3)
