@@ -36,8 +36,9 @@ In the end, it’s similar to ekknod's EC cheat but adapted for CS 1.6, because 
 4) If you want disable test signing mode, open Test OFF.bat file and reboot computer.
 
 ## Note
-This cheat after opened, cannot terminate. You should reboot computer for terminate.
-!!! You only need to open the Zodiak.bat file once. If you open it again, you will get a blue screen error. !!!
+- This cheat after opened, cannot terminate. You should reboot computer for terminate.
+- You only need to open the Zodiak.bat file once. If you open it again, you will get a blue screen error!!!
+- For Aim AWP settings, scope mode not working right now. You should use Zodiak.rc configs shoot without scope. (exec Zodiak.rc) (Use MOUSE3 click to shoot with AWP)
 
 ### Default Keybinds
 - **F6**: Toggle Aimbot
@@ -49,7 +50,10 @@ This cheat after opened, cannot terminate. You should reboot computer for termin
 - **PgDown**: Adjust Smooth- (Minumum: 1, once key press minus 1)
 - **Numpad -**: Aim Head (Default)
 - **Numpad +**: Aim Chest
-
+- **Arrow Right**: Aim Rifle settings (Aim Position: Head, AimFov: 100, AimSmooth: 5)
+- **Arrow Left**: Aim SMG settings (Aim Position: Head, AimFov: 100, AimSmooth: 4)
+- **Arrow Up**: Aim AWP settings (Aim Position: Chest, AimFov: 100, AimSmooth: 2)
+- **Arrow Down**: Aim Pistol settings (Aim Position: Head, AimFov: 100, AimSmooth: 3)
 
 ## Credits
 - Developer Page: https://github.com/3a1/Zodiak
