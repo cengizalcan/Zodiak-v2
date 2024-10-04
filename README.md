@@ -38,7 +38,7 @@ In the end, it’s similar to ekknod's EC cheat but adapted for CS 1.6, because 
 ## Note
 - This cheat after opened, cannot terminate. You should reboot computer for terminate.
 - You only need to open the Zodiak.bat file once. If you open it again, you will get a blue screen error !!!
-- For Aim AWP settings, scope mode not working right now. You should use Zodiak.rc configs shoot without scope. (exec Zodiak.rc) (Use MOUSE3 click to shoot with AWP)
+- For Aim AWP settings, scope mode not working right now. You should use Zodiak.rc configs shoot without scope. (exec Zodiak.rc) (Press F1 key and use MOUSE3 click to shoot with AWP)
 
 ### Default Keybinds
 - **F6**: Toggle Aimbot
