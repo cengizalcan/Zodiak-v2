@@ -1,8 +1,0 @@
-// ALIAS
-alias w3 "wait; wait; wait"
-alias w5 "wait; wait; wait; wait; wait"
-
-// AWP
-alias +fastawp "+attack2; w5; +attack"
-alias -fastawp "-attack2; w3; -attack; wait; lastinv; wait; lastinv"
-bind "F1" "bind MOUSE3 +fastawp"
