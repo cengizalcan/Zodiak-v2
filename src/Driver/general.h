@@ -32,13 +32,14 @@
 
 #define AIMHEADPOSITIONKEY    0x6D		// VK_SUBTRACT
 #define AIMCHESTPOSITIONKEY   0x6B		// VK_ADD
-#define AIMSTOMACHPOSITIONKEY 0x2E		// VK_NUMPADDEL 
+// #define AIMSTOMACHPOSITIONKEY 0x2E		// VK_NUMPADDEL 
 
 static RGB box_color = { 255.0f, 0.0f, 0.0f };
 
-static float aimbot_smooth = 2.f;
-static int aimbot_fov = 25;
-static float aimposition = 10.f;
+static float aimbot_smooth = 4.f;
+static int aimbot_fov = 100;
+static float aimposition = 20.f;
+static float faimposition = 20.f;
 
 /* Global variables */
 static CHAR* gProcessName = "hl.exe";

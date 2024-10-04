@@ -1,6 +1,8 @@
 #include "game.h"
 
-bool get_hw_base() 
+
+
+bool get_hw_base()
 {
 	hw_dll = GetModuleBase32(gPid, L"\\hw.dll");
 
@@ -11,7 +13,7 @@ bool get_hw_base()
 	return true;
 }
 
-bool get_client_base() 
+bool get_client_base()
 {
 	client_dll = GetModuleBase32(gPid, L"\\client.dll");
 
@@ -46,7 +48,7 @@ bool entity_dead(int i)
 	*/
 	float state = get_entity_state(i);
 
-	if (!state) 
+	if (!state)
 	{
 		return true;
 	}
@@ -87,7 +89,7 @@ bool entity_screen(int i, BOX* box)
 
 	if (!w2s(screen_size, origin_bottom, &screen_bottom, view_matrix) ||
 		!w2s(screen_size, origin_top, &screen_top, view_matrix) ||
-		!w2s(screen_size, origin_head, &screen_head, view_matrix)) 
+		!w2s(screen_size, origin_head, &screen_head, view_matrix))
 	{
 		return false;
 	}
@@ -97,7 +99,7 @@ bool entity_screen(int i, BOX* box)
 	screen_top.x -= width / 2;
 
 	if (screen_top.x <= 0.0f || screen_top.y <= 0.0f ||
-		screen_bottom.x <= 0.0f || screen_bottom.y <= 0.0f) 
+		screen_bottom.x <= 0.0f || screen_bottom.y <= 0.0f)
 	{
 		return false;
 	}
@@ -112,7 +114,7 @@ bool entity_screen(int i, BOX* box)
 	return true;
 }
 
-int get_player_team() 
+int get_player_team()
 {
 	int team;
 	read(client_dll + dwLocalTeam, &team, sizeof(int));
@@ -120,7 +122,7 @@ int get_player_team()
 	return team;
 }
 
-bool entity_teammate(int i) 
+bool entity_teammate(int i)
 {
 	int team = get_player_team();
 	char* model = get_entity_model(i);
@@ -166,7 +168,7 @@ Vector2 get_closest_entity()
 
 	for (int i = 0; i < MAX_ENTITIES; ++i)
 	{
-		if (entity_list[i].x || entity_list[i].y) 
+		if (entity_list[i].x || entity_list[i].y)
 		{
 			if (entity_list[i].x > lowerX && entity_list[i].x < upperX && entity_list[i].y > lowerY && entity_list[i].y < upperY)
 			{
@@ -183,7 +185,7 @@ Vector2 get_closest_entity()
 	return closest_enemy;
 }
 
-char* get_entity_model(int i) 
+char* get_entity_model(int i)
 {
 	static char model[10];
 	read(hw_dll + dwEntityList + (i * m_entitySize) + m_entityModel, &model, sizeof(model));
@@ -210,19 +212,6 @@ Vector3 get_entity_origin(int i)
 void HandleKeyInputs()
 {
 	/* Aimbot */
-	if (bAimbot)
-	{
-		if (NtUserGetAsyncKeyState(AIMBOT_KEY))
-		{
-			Vector2 closest_enemy = get_closest_entity();
-
-			if (closest_enemy.x != 0 && closest_enemy.y != 0)
-			{
-				aim(closest_enemy, screen_size, aimbot_smooth);
-			}
-		}
-	}
-
 
 	{
 		static count = 0;
@@ -315,7 +304,7 @@ void HandleKeyInputs()
 		if (NtUserGetAsyncKeyState(FOV_UP_KEY)) // VK_RIGHT
 		{
 			count++;
-			if (count == 1) 
+			if (count == 1)
 			{
 				aimbot_fov += 25;
 			}
@@ -344,7 +333,7 @@ void HandleKeyInputs()
 	}
 
 	{
-		static count = 1;
+		static count = 0;
 		/* Aim Head Position */
 		if (NtUserGetAsyncKeyState(AIMHEADPOSITIONKEY)) // VK_SUBTRACT
 		{
@@ -352,6 +341,7 @@ void HandleKeyInputs()
 			if (count == 1)
 			{
 				aimposition = 20.f;
+				faimposition = aimposition;
 			}
 		}
 		else
@@ -361,7 +351,7 @@ void HandleKeyInputs()
 	}
 
 	{
-		static count = 1;
+		static count = 0;
 		/* Aim Chest Position */
 		if (NtUserGetAsyncKeyState(AIMCHESTPOSITIONKEY)) // VK_ADD
 		{
@@ -369,6 +359,7 @@ void HandleKeyInputs()
 			if (count == 1)
 			{
 				aimposition = 10.f;
+				faimposition = aimposition;
 			}
 		}
 		else
@@ -377,22 +368,20 @@ void HandleKeyInputs()
 		}
 	}
 
+	if (bAimbot)
 	{
-		static count = 1;
-		/* Aim Stomach Position */
-		if (NtUserGetAsyncKeyState(AIMSTOMACHPOSITIONKEY)) // VK_NUMPADDEL
+		if (NtUserGetAsyncKeyState(AIMBOT_KEY))
 		{
-			count++;
-			if (count == 1)
+			Vector2 closest_enemy = get_closest_entity();
+
+			if (closest_enemy.x != 0 && closest_enemy.y != 0)
 			{
-				aimposition = 0.f;
+				aim(closest_enemy, screen_size, aimbot_smooth);
+				aimposition -= 0.25f;
 			}
 		}
-		else
-		{
-			count = 0;
-		}
-	}
+		else { aimposition = faimposition; }
+	}		
 }
 
 /* Converted w2s that I have used in cs2 cheat */
@@ -407,7 +396,7 @@ bool w2s(Vector2 screen, Vector3 position, Vector2* out, view_matrix_t matrix)
 	out->y = matrix[0][1] * position.x + matrix[1][1] * position.y + matrix[2][1] * position.z + matrix[3][1];
 	float w = matrix[0][3] * position.x + matrix[1][3] * position.y + matrix[2][3] * position.z + matrix[3][3];
 
-	if (w < 0.01f) 
+	if (w < 0.01f)
 	{
 		return false;
 	}
@@ -456,7 +445,7 @@ void aim(Vector2 position, Vector2 screen, float SmoothAmount)
 		}
 	}
 
-	if (TargetX != 0 || TargetY != 0) 
+	if (TargetX != 0 || TargetY != 0)
 	{
 		mouse_move((LONG)(TargetX), (LONG)(TargetY), 0);
 	}
