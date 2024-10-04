@@ -13,6 +13,17 @@ In the end, it’s similar to ekknod's EC cheat but adapted for CS 1.6, because 
 - Thread context spoofing
 - Operates in a single thread
 
+## Limits
+- Works only on steam version (pre-25th anniversary build)
+- Esp work typically only in windowed fullscreen mode, but for someone it can also work in fullscreen. If someone have two or more monitors it will work in fullscreen.
+- Supported only stretched resolution, black bars are not supported (use -stretchaspec or -nofbo)
+
+## Bypass
+- Fastcup
+- Wargods
+- Any other server side anticheat
+- Demochecker
+
 ## Features
 - **Aimbot** (calling "own" MouseClassServiceCallback)
 - **ESP** (GDI kernel drawing without hooks)
