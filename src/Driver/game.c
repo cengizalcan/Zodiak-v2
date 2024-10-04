@@ -340,7 +340,7 @@ void HandleKeyInputs()
 			count++;
 			if (count == 1)
 			{
-				aimposition = 20.f;
+				aimposition = 23.f;
 				faimposition = aimposition;
 			}
 		}
@@ -377,7 +377,7 @@ void HandleKeyInputs()
 			if (closest_enemy.x != 0 && closest_enemy.y != 0)
 			{
 				aim(closest_enemy, screen_size, aimbot_smooth);
-				aimposition -= 0.25f;
+				aimposition -= 0.30f;
 			}
 		}
 		else { aimposition = faimposition; }
