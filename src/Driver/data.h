@@ -6,7 +6,6 @@ extern bool bEsp;
 extern bool bAimbot;
 extern bool NoSpread;
 extern bool bOnlyEnemies;
-extern bool AwpPistolBot;
 
 
 

@@ -13,7 +13,6 @@
 /* Settings */
 #define MAX_ENTITIES          64
 #define AIMBOT_KEY            0x1		// VK_LBUTTON
-#define	AWPPISTOLKEY          0x4       // VK_MBUTTON
 
 // change these if aimbot points below or higher than player head
 // or want to make bigger esp box or something
@@ -30,7 +29,6 @@
 #define ONLY_ENEMIES_KEY      0x77		// F8
 #define AIMHEADPOSITIONKEY    0x6D		// VK_SUBTRACT
 #define AIMCHESTPOSITIONKEY   0x6B		// VK_ADD
-
 #define AIMRIFLEKEY           0x27      // VK_RIGHT
 #define AIMSMGKEY             0x25      // VK_LEFT
 #define AIMAWPKEY             0x26      // VK_UP

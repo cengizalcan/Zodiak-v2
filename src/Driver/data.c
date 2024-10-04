@@ -5,7 +5,6 @@ bool bEsp = true;
 bool bAimbot = true;
 bool NoSpread = true;
 bool bOnlyEnemies = false;
-bool AwpPistolBot = true;
 
 
 void DataInitialize() 

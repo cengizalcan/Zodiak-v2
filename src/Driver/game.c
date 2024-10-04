@@ -225,19 +225,6 @@ void HandleKeyInputs()
 		}
 	}
 
-	if (AwpPistolBot)
-	{
-		if (NtUserGetAsyncKeyState(AWPPISTOLKEY)) //MOUSE3
-		{
-			Vector2 closest_enemy = get_closest_entity();
-
-			if (closest_enemy.x != 0 && closest_enemy.y != 0)
-			{
-				aim(closest_enemy, screen_size, aimbot_smooth);
-			}
-		}
-	}
-
 	if (NoSpread)
 	{
 		if (NtUserGetAsyncKeyState(AIMBOT_KEY)) //MOUSE1
@@ -430,10 +417,11 @@ void HandleKeyInputs()
 			count++;
 			if (count == 1)
 			{
+				NoSpread = 1;
 				aimposition = 23.f;
 				faimposition = aimposition;
 				aimbot_fov = 100;
-				aimbot_smooth = 5.f;
+				aimbot_smooth = 6.f;
 			}
 		}
 		else
@@ -450,6 +438,7 @@ void HandleKeyInputs()
 			count++;
 			if (count == 1)
 			{
+				NoSpread = 0;
 				aimposition = 23.f;
 				faimposition = aimposition;
 				aimbot_fov = 100;
@@ -470,6 +459,7 @@ void HandleKeyInputs()
 			count++;
 			if (count == 1)
 			{
+				NoSpread = 0;
 				aimposition = 10.f;
 				faimposition = aimposition;
 				aimbot_fov = 100;
@@ -490,7 +480,7 @@ void HandleKeyInputs()
 			count++;
 			if (count == 1)
 			{
-				aimposition = 23.f;
+				NoSpread = 1;
 				faimposition = aimposition;
 				aimbot_fov = 100;
 				aimbot_smooth = 3.f;
