@@ -27,7 +27,7 @@ In the end, it’s similar to ekknod's EC cheat but adapted for CS 1.6, because 
 ## Features
 - **Aimbot** (calling "own" MouseClassServiceCallback)
 - **ESP** (GDI kernel drawing without hooks)
-- **NoRecoil** (Beta version)
+- **NoSpread** (Basic and beta version. Held mouse1, aim slowly slide down)
 
 ## Usage
 1) Download zip file and extract.
