@@ -32,11 +32,11 @@ This cheat after opened, cannot terminate. You should reboot computer for termin
 - **F6**: Toggle Aimbot
 - **F7**: Toggle ESP
 - **F8**: Toggle "Only Enemies" Mode
-- **Home**: Adjust FOV+  (Default: 100, once key press plus 25)
+- **Home**: Adjust FOV+  (Default: 50, once key press plus 25)
 - **End**: Adjust FOV- (Minumum: 25, once key press minus 25)
-- **PgUp**: Adjust Smooth+ (Default: 4, once key press plus 1)
+- **PgUp**: Adjust Smooth+ (Default: 5, once key press plus 1)
 - **PgDown**: Adjust Smooth- (Minumum: 1, once key press minus 1)
-- **Numpad -**: Aim Head
+- **Numpad -**: Aim Head (Default)
 - **Numpad +**: Aim Chest
 
 
