@@ -1,1 +1,0 @@
-.\kdmapper.exe .\Zodiak.sys
