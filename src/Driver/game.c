@@ -229,7 +229,10 @@ void HandleKeyInputs()
 	{
 		if (NtUserGetAsyncKeyState(AIMBOT_KEY)) //MOUSE1
 		{
-			aimposition -= 1.f;
+			if (aimposition > -10.f)
+			{
+				aimposition -= 0.80f;
+			}
 		}
 		else
 		{
@@ -241,7 +244,10 @@ void HandleKeyInputs()
 	{
 		if (NtUserGetAsyncKeyState(AIMBOT_KEY)) //MOUSE1
 		{
-			aimposition -= 0.5f;
+			if (aimposition > 0.f)
+			{
+				aimposition -= 0.40f;
+			}
 		}
 		else
 		{
