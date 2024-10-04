@@ -21,7 +21,9 @@
 #define ESP_BOX_TOP           25.f				// Box top position (relatively of the player origin)
 #define ESP_TOGGLE_KEY        0x76		// F7
 #define AIMBOT_TOGGLE_KEY     0x75		// F6
-#define NOSPREAD_TOGGLE_KEY   0x78		// F9
+#define NOSPREAD_ONTOGGLE_KEY 0x78		// F9
+#define NOSPREAD_ONTOGGLE_KEY2 0x2E		// DEL
+#define NOSPREAD_OFF_KEY      0x79		// F10
 #define SMOOTH_UP_KEY         0x21		// VK_PRIOR
 #define SMOOTH_DOWN_KEY       0x22		// VK_NEXT
 #define FOV_UP_KEY            0x24		// VK_HOME

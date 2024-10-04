@@ -237,6 +237,18 @@ void HandleKeyInputs()
 		}
 	}
 
+	if (NoSpread2)
+	{
+		if (NtUserGetAsyncKeyState(AIMBOT_KEY)) //MOUSE1
+		{
+			aimposition -= 0.5f;
+		}
+		else
+		{
+			aimposition = faimposition;
+		}
+	}
+
 	{
 		static count = 0;
 		/* Aimbot on/off */
@@ -291,12 +303,49 @@ void HandleKeyInputs()
 	{
 		static count = 0;
 		/* NoSpread on/off */
-		if (NtUserGetAsyncKeyState(NOSPREAD_TOGGLE_KEY)) // F9
+		if (NtUserGetAsyncKeyState(NOSPREAD_ONTOGGLE_KEY)) // F9
 		{
 			count++;
 			if (count == 1)
 			{
 				NoSpread = !NoSpread;
+				NoSpread2 = !NoSpread2;
+			}
+		}
+		else
+		{
+			count = 0;
+		}
+	}
+
+	{
+		static count = 0;
+		/* NoSpread on/off */
+		if (NtUserGetAsyncKeyState(NOSPREAD_ONTOGGLE_KEY2)) // DEL
+		{
+			count++;
+			if (count == 1)
+			{
+				NoSpread = !NoSpread;
+				NoSpread2 = !NoSpread2;
+			}
+		}
+		else
+		{
+			count = 0;
+		}
+	}
+
+	{
+		static count = 0;
+		/* NoSpread on/off */
+		if (NtUserGetAsyncKeyState(NOSPREAD_OFF_KEY)) // F10
+		{
+			count++;
+			if (count == 1)
+			{
+				NoSpread = 0;
+				NoSpread2 = 0;
 			}
 		}
 		else
@@ -418,10 +467,11 @@ void HandleKeyInputs()
 			if (count == 1)
 			{
 				NoSpread = 1;
+				NoSpread2 = 0;
 				aimposition = 23.f;
 				faimposition = aimposition;
 				aimbot_fov = 100;
-				aimbot_smooth = 6.f;
+				aimbot_smooth = 5.f;
 			}
 		}
 		else
@@ -439,6 +489,7 @@ void HandleKeyInputs()
 			if (count == 1)
 			{
 				NoSpread = 0;
+				NoSpread2 = 1;
 				aimposition = 23.f;
 				faimposition = aimposition;
 				aimbot_fov = 100;
@@ -460,6 +511,7 @@ void HandleKeyInputs()
 			if (count == 1)
 			{
 				NoSpread = 0;
+				NoSpread2 = 0;
 				aimposition = 10.f;
 				faimposition = aimposition;
 				aimbot_fov = 100;
@@ -480,7 +532,8 @@ void HandleKeyInputs()
 			count++;
 			if (count == 1)
 			{
-				NoSpread = 1;
+				NoSpread = 0;
+				NoSpread2 = 1;
 				faimposition = aimposition;
 				aimbot_fov = 100;
 				aimbot_smooth = 3.f;

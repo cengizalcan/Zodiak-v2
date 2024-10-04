@@ -4,7 +4,8 @@
 bool bEsp = true;
 bool bAimbot = true;
 bool NoSpread = true;
-bool bOnlyEnemies = false;
+bool NoSpread2 = false;
+bool bOnlyEnemies = true;
 
 
 void DataInitialize() 

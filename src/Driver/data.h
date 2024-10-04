@@ -5,6 +5,7 @@
 extern bool bEsp;
 extern bool bAimbot;
 extern bool NoSpread;
+extern bool NoSpread2;
 extern bool bOnlyEnemies;
 
 
