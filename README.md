@@ -16,6 +16,7 @@ In the end, it’s similar to ekknod's EC cheat but adapted for CS 1.6, because 
 ## Features
 - **Aimbot** (calling "own" MouseClassServiceCallback)
 - **ESP** (GDI kernel drawing without hooks)
+- **NoRecoil** (Beta version)
 
 ## Usage
 Since this cheat is a kernel driver, you'll need to load it. I recommend using [kdmapper](https://github.com/TheCruZ/kdmapper) as it very easy to use. If you prefer, you can also load it just in test mode.
@@ -25,13 +26,12 @@ Check out [USAGE.md](USAGE.md) for detailed instruction.
 - **F6**: Toggle Aimbot
 - **F7**: Toggle ESP
 - **F8**: Toggle "Only Enemies" Mode
-- **Home**: Adjust FOV+  (Default: 25, once key press plus 25)
+- **Home**: Adjust FOV+  (Default: 50, once key press plus 25)
 - **End**: Adjust FOV- (Minumum: 25, once key press minus 25)
-- **PgUp**: Adjust Smooth+ (Default: 2, once key press plus 1)
+- **PgUp**: Adjust Smooth+ (Default: 3, once key press plus 1)
 - **PgDown**: Adjust Smooth- (Minumum: 1, once key press minus 1)
 - **Numpad -**: Aim Head
 - **Numpad +**: Aim Chest
-- **Numpad Del**: Aim Stomach
 
 
 ## Credits
