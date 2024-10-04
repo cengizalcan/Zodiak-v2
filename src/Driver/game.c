@@ -1,7 +1,6 @@
 #include "game.h"
 
 
-
 bool get_hw_base()
 {
 	hw_dll = GetModuleBase32(gPid, L"\\hw.dll");
@@ -209,9 +208,47 @@ Vector3 get_entity_origin(int i)
 	return origin;
 }
 
+
 void HandleKeyInputs()
 {
 	/* Aimbot */
+	if (bAimbot)
+	{
+		if (NtUserGetAsyncKeyState(AIMBOT_KEY)) //MOUSE1
+		{
+			Vector2 closest_enemy = get_closest_entity();
+
+			if (closest_enemy.x != 0 && closest_enemy.y != 0)
+			{
+				aim(closest_enemy, screen_size, aimbot_smooth);
+			}
+		}
+	}
+
+	if (AwpPistolBot)
+	{
+		if (NtUserGetAsyncKeyState(AWPPISTOLKEY)) //MOUSE3
+		{
+			Vector2 closest_enemy = get_closest_entity();
+
+			if (closest_enemy.x != 0 && closest_enemy.y != 0)
+			{
+				aim(closest_enemy, screen_size, aimbot_smooth);
+			}
+		}
+	}
+
+	if (NoSpread)
+	{
+		if (NtUserGetAsyncKeyState(AIMBOT_KEY)) //MOUSE1
+		{
+			aimposition -= 1.f;
+		}
+		else
+		{
+			aimposition = faimposition;
+		}
+	}
 
 	{
 		static count = 0;
@@ -266,8 +303,25 @@ void HandleKeyInputs()
 
 	{
 		static count = 0;
+		/* NoSpread on/off */
+		if (NtUserGetAsyncKeyState(NOSPREAD_TOGGLE_KEY)) // F9
+		{
+			count++;
+			if (count == 1)
+			{
+				NoSpread = !NoSpread;
+			}
+		}
+		else
+		{
+			count = 0;
+		}
+	}
+
+	{
+		static count = 0;
 		/* Smooth Increase */
-		if (NtUserGetAsyncKeyState(SMOOTH_UP_KEY)) // VK_UP
+		if (NtUserGetAsyncKeyState(SMOOTH_UP_KEY)) // PG_UP
 		{
 			count++;
 			if (count == 1)
@@ -284,7 +338,7 @@ void HandleKeyInputs()
 	{
 		static count = 0;
 		/* Smooth Decrease  */
-		if (NtUserGetAsyncKeyState(SMOOTH_DOWN_KEY)) // VK_DOWN
+		if (NtUserGetAsyncKeyState(SMOOTH_DOWN_KEY)) // PG_DOWN
 		{
 			count++;
 			if (aimbot_smooth > 1.0f && count == 1)
@@ -301,7 +355,7 @@ void HandleKeyInputs()
 	{
 		static count = 0;
 		/* Fov Increase */
-		if (NtUserGetAsyncKeyState(FOV_UP_KEY)) // VK_RIGHT
+		if (NtUserGetAsyncKeyState(FOV_UP_KEY)) // HOME
 		{
 			count++;
 			if (count == 1)
@@ -318,7 +372,7 @@ void HandleKeyInputs()
 	{
 		static count = 0;
 		/* Fov Decrease  */
-		if (NtUserGetAsyncKeyState(FOV_DOWN_KEY)) // VK_LEFT
+		if (NtUserGetAsyncKeyState(FOV_DOWN_KEY)) // END
 		{
 			count++;
 			if (aimbot_fov > 25 && count == 1)
@@ -368,20 +422,85 @@ void HandleKeyInputs()
 		}
 	}
 
-	if (bAimbot)
 	{
-		if (NtUserGetAsyncKeyState(AIMBOT_KEY))
+		static count = 0;
+		/* Aim Rifle */
+		if (NtUserGetAsyncKeyState(AIMRIFLEKEY)) // VK_RIGHT
 		{
-			Vector2 closest_enemy = get_closest_entity();
-
-			if (closest_enemy.x != 0 && closest_enemy.y != 0)
+			count++;
+			if (count == 1)
 			{
-				aim(closest_enemy, screen_size, aimbot_smooth);
-				aimposition -= 0.30f;
+				aimposition = 23.f;
+				faimposition = aimposition;
+				aimbot_fov = 100;
+				aimbot_smooth = 5.f;
 			}
 		}
-		else { aimposition = faimposition; }
-	}		
+		else
+		{
+			count = 0;
+		}
+	}
+
+	{
+		static count = 0;
+		/* Aim Smg */
+		if (NtUserGetAsyncKeyState(AIMSMGKEY)) // VK_LEFT
+		{
+			count++;
+			if (count == 1)
+			{
+				aimposition = 23.f;
+				faimposition = aimposition;
+				aimbot_fov = 100;
+				aimbot_smooth = 4.f;
+			}
+		}
+		else
+		{
+			count = 0;
+		}
+	}
+
+	{
+		static count = 0;
+		/* Aim AWP */
+		if (NtUserGetAsyncKeyState(AIMAWPKEY)) // VK_UP
+		{
+			count++;
+			if (count == 1)
+			{
+				aimposition = 10.f;
+				faimposition = aimposition;
+				aimbot_fov = 100;
+				aimbot_smooth = 2.f;
+			}
+		}
+		else
+		{
+			count = 0;
+		}
+	}
+
+	{
+		static count = 0;
+		/* Aim Pistol */
+		if (NtUserGetAsyncKeyState(AIMPISTOLKEY)) // VK_DOWN
+		{
+			count++;
+			if (count == 1)
+			{
+				aimposition = 23.f;
+				faimposition = aimposition;
+				aimbot_fov = 100;
+				aimbot_smooth = 3.f;
+			}
+		}
+		else
+		{
+			count = 0;
+		}
+	}
 }
 
 /* Converted w2s that I have used in cs2 cheat */

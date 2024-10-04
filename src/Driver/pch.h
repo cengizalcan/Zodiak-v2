@@ -6,6 +6,7 @@
 #include <stdbool.h>
 #include <ntddk.h>
 
+
 #include "struct.h"
 #include "general.h"
 #include "memory.h"
