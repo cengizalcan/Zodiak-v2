@@ -41,6 +41,10 @@ In the end, it’s similar to ekknod's EC cheat but adapted for CS 1.6, because 
 - For Aim AWP settings, scope mode not working right now. You should use Zodiak.rc configs shoot without scope. (exec Zodiak.rc) (Press F1 key and use MOUSE3 click to shoot with AWP)
 
 ### Default Keybinds
+- **F1**: Aim Rifle settings (Max. NoRecoil, Aim Position: Head, AimFov: 100, AimSmooth: 5)
+- **F2**: Aim Pistol settings (Min. NoRecoil, Aim Position: Head, AimFov: 100, AimSmooth: 3)
+ - **F3**: Aim AWP settings (No NoRecoil, Aim Position: Chest, AimFov: 100, AimSmooth: 2)
+- **F4**: Aim SMG settings (Min. NoRecoil, Aim Position: Head, AimFov: 100, AimSmooth: 4)
 - **F6**: Toggle Aimbot
 - **F7**: Toggle ESP
 - **F8**: Toggle "Only Enemies" Mode
@@ -52,10 +56,6 @@ In the end, it’s similar to ekknod's EC cheat but adapted for CS 1.6, because 
 - **PgDown**: Adjust Smooth- (Minumum: 1, once key press decrease 1)
 - **Numpad -**: Aim Head (Default)
 - **Numpad +**: Aim Chest
-- **F1**: Aim Rifle settings (Enable NoRecoil, Aim Position: Head, AimFov: 100, AimSmooth: 5)
-- **F2**: Aim Pistol settings (Enable NoRecoil, Aim Position: Head, AimFov: 100, AimSmooth: 3)
- - **F3**: Aim AWP settings (Disable NoRecoil, Aim Position: Chest, AimFov: 100, AimSmooth: 2)
-- **F4**: Aim SMG settings (Disable NoRecoil, Aim Position: Head, AimFov: 100, AimSmooth: 4)
 
 ## Credits
 - Developer Page: https://github.com/3a1/Zodiak
