@@ -229,7 +229,7 @@ void HandleKeyInputs()
 	{
 		if (NtUserGetAsyncKeyState(AIMBOT_KEY)) //MOUSE1
 		{
-			if (aimposition > -10.f)
+			if (aimposition > -15.f)
 			{
 				aimposition -= 0.80f;
 			}
@@ -436,7 +436,7 @@ void HandleKeyInputs()
 			count++;
 			if (count == 1)
 			{
-				aimposition = 23.f;
+				aimposition = 25.f;
 				faimposition = aimposition;
 			}
 		}
@@ -467,14 +467,14 @@ void HandleKeyInputs()
 	{
 		static count = 0;
 		/* Aim Rifle */
-		if (NtUserGetAsyncKeyState(AIMRIFLEKEY)) // VK_RIGHT
+		if (NtUserGetAsyncKeyState(AIMRIFLEKEY)) // F1
 		{
 			count++;
 			if (count == 1)
 			{
 				NoSpread = 1;
 				NoSpread2 = 0;
-				aimposition = 23.f;
+				aimposition = 25.f;
 				faimposition = aimposition;
 				aimbot_fov = 100;
 				aimbot_smooth = 5.f;
@@ -488,18 +488,18 @@ void HandleKeyInputs()
 
 	{
 		static count = 0;
-		/* Aim Smg */
-		if (NtUserGetAsyncKeyState(AIMSMGKEY)) // VK_LEFT
+		/* Aim Pistol */
+		if (NtUserGetAsyncKeyState(AIMPISTOLKEY)) // F2
 		{
 			count++;
 			if (count == 1)
 			{
 				NoSpread = 0;
 				NoSpread2 = 1;
-				aimposition = 23.f;
+				aimposition = 25.f;
 				faimposition = aimposition;
 				aimbot_fov = 100;
-				aimbot_smooth = 4.f;
+				aimbot_smooth = 3.f;
 			}
 		}
 		else
@@ -511,7 +511,7 @@ void HandleKeyInputs()
 	{
 		static count = 0;
 		/* Aim AWP */
-		if (NtUserGetAsyncKeyState(AIMAWPKEY)) // VK_UP
+		if (NtUserGetAsyncKeyState(AIMAWPKEY)) // F3
 		{
 			count++;
 			if (count == 1)
@@ -532,17 +532,18 @@ void HandleKeyInputs()
 
 	{
 		static count = 0;
-		/* Aim Pistol */
-		if (NtUserGetAsyncKeyState(AIMPISTOLKEY)) // VK_DOWN
+		/* Aim Smg */
+		if (NtUserGetAsyncKeyState(AIMSMGKEY)) // F4
 		{
 			count++;
 			if (count == 1)
 			{
 				NoSpread = 0;
 				NoSpread2 = 1;
+				aimposition = 25.f;
 				faimposition = aimposition;
 				aimbot_fov = 100;
-				aimbot_smooth = 3.f;
+				aimbot_smooth = 4.f;
 			}
 		}
 		else
