@@ -52,10 +52,10 @@ In the end, it’s similar to ekknod's EC cheat but adapted for CS 1.6, because 
 - **PgDown**: Adjust Smooth- (Minumum: 1, once key press decrease 1)
 - **Numpad -**: Aim Head (Default)
 - **Numpad +**: Aim Chest
-- **Arrow Right**: Aim Rifle settings (Enable NoRecoil, Aim Position: Head, AimFov: 100, AimSmooth: 5)
-- **Arrow Left**: Aim SMG settings (Disable NoRecoil, Aim Position: Head, AimFov: 100, AimSmooth: 4)
-- **Arrow Up**: Aim AWP settings (Disable NoRecoil, Aim Position: Chest, AimFov: 100, AimSmooth: 2)
-- **Arrow Down**: Aim Pistol settings (Enable NoRecoil, Aim Position: Head, AimFov: 100, AimSmooth: 3)
+- **F1**: Aim Rifle settings (Enable NoRecoil, Aim Position: Head, AimFov: 100, AimSmooth: 5)
+- **F2**: Aim Pistol settings (Enable NoRecoil, Aim Position: Head, AimFov: 100, AimSmooth: 3)
+ - **F3**: Aim AWP settings (Disable NoRecoil, Aim Position: Chest, AimFov: 100, AimSmooth: 2)
+- **F4**: Aim SMG settings (Disable NoRecoil, Aim Position: Head, AimFov: 100, AimSmooth: 4)
 
 ## Credits
 - Developer Page: https://github.com/3a1/Zodiak
