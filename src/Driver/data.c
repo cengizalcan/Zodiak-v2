@@ -3,9 +3,10 @@
 /* Def values */
 bool bEsp = true;
 bool bAimbot = true;
-bool NoSpread = true;
-bool NoSpread2 = false;
 bool bOnlyEnemies = true;
+bool RifleBot = false;
+bool SMGPistolBot = false;
+bool AWPBot = false;
 
 
 void DataInitialize() 

@@ -20,9 +20,11 @@
 #define ESP_BOX_BOTTOM        30.f				// Box bottom position (relatively of the player origin) 
 #define ESP_BOX_TOP           25.f				// Box top position (relatively of the player origin)
 #define AIMRIFLEKEY           0x70      // F1
-#define AIMPISTOLKEY          0x71      // F2
+#define AIMRIFLEKEY2          0x43      // C
+#define AIMSMGPISTOLKEY       0x71      // F2
+#define AIMSMGPISTOLKEY2      0x46      // F
 #define AIMAWPKEY             0x72      // F3
-#define AIMSMGKEY             0x73      // F4
+#define AIMAWPKEY2            0x56      // V
 #define AIMBOT_TOGGLE_KEY     0x75		// F6
 #define ESP_TOGGLE_KEY        0x76		// F7
 #define ONLY_ENEMIES_KEY      0x77		// F8
@@ -40,7 +42,9 @@
 
 static RGB box_color = { 0.0f, 255.0f, 255.0f };
 static float aimbot_smooth = 5.f;
+static float faimbot_smooth = 5.f;
 static int aimbot_fov = 50;
+static int faimbot_fov = 50;
 static float aimposition = 25.f;
 static float faimposition = 25.f;
 

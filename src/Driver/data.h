@@ -4,9 +4,10 @@
 
 extern bool bEsp;
 extern bool bAimbot;
-extern bool NoSpread;
-extern bool NoSpread2;
 extern bool bOnlyEnemies;
+extern bool RifleBot;
+extern bool SMGPistolBot;
+extern bool AWPBot;
 
 
 

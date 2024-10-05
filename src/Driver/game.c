@@ -225,36 +225,6 @@ void HandleKeyInputs()
 		}
 	}
 
-	if (NoSpread)
-	{
-		if (NtUserGetAsyncKeyState(AIMBOT_KEY)) //MOUSE1
-		{
-			if (aimposition > -15.f)
-			{
-				aimposition -= 0.80f;
-			}
-		}
-		else
-		{
-			aimposition = faimposition;
-		}
-	}
-
-	if (NoSpread2)
-	{
-		if (NtUserGetAsyncKeyState(AIMBOT_KEY)) //MOUSE1
-		{
-			if (aimposition > 0.f)
-			{
-				aimposition -= 0.40f;
-			}
-		}
-		else
-		{
-			aimposition = faimposition;
-		}
-	}
-
 	{
 		static count = 0;
 		/* Aimbot on/off */
@@ -314,8 +284,9 @@ void HandleKeyInputs()
 			count++;
 			if (count == 1)
 			{
-				NoSpread = !NoSpread;
-				NoSpread2 = !NoSpread2;
+				RifleBot = !RifleBot;
+				SMGPistolBot = !SMGPistolBot;
+				AWPBot = !AWPBot;
 			}
 		}
 		else
@@ -332,8 +303,9 @@ void HandleKeyInputs()
 			count++;
 			if (count == 1)
 			{
-				NoSpread = !NoSpread;
-				NoSpread2 = !NoSpread2;
+				RifleBot = !RifleBot;
+				SMGPistolBot = !SMGPistolBot;
+				AWPBot = !AWPBot;
 			}
 		}
 		else
@@ -350,8 +322,145 @@ void HandleKeyInputs()
 			count++;
 			if (count == 1)
 			{
-				NoSpread = 0;
-				NoSpread2 = 0;
+				RifleBot = 0;
+				SMGPistolBot = 0;
+				AWPBot = 0;
+			}
+		}
+		else
+		{
+			count = 0;
+		}
+	}
+
+	if (RifleBot)
+	{
+		if (NtUserGetAsyncKeyState(AIMBOT_KEY)) //MOUSE1
+		{
+			if (aimposition > -15.f)
+			{
+				aimposition -= 1.f;
+			}
+			if (aimbot_fov < 200)
+			{
+				aimbot_fov += 10;
+			}
+			if (aimbot_smooth < 8.f)
+			{
+				aimbot_smooth += 0.5f;
+			}
+		}
+		else
+		{
+			aimposition = faimposition;
+			aimbot_fov = faimbot_fov;
+			aimbot_smooth = faimbot_smooth;
+		}
+	}
+
+	if (SMGPistolBot)
+	{
+		if (NtUserGetAsyncKeyState(AIMBOT_KEY)) //MOUSE1
+		{
+			if (aimposition > 0.f)
+			{
+				aimposition -= 0.5f;
+			}
+			if (aimbot_fov < 200)
+			{
+				aimbot_fov += 10;
+			}
+			if (aimbot_smooth < 5.f)
+			{
+				aimbot_smooth += 0.25f;
+			}
+		}
+		else
+		{
+			aimposition = faimposition;
+			aimbot_fov = faimbot_fov;
+			aimbot_smooth = faimbot_smooth;
+		}
+	}
+
+	if (AWPBot)
+	{
+		if (NtUserGetAsyncKeyState(AIMBOT_KEY)) //MOUSE1
+		{
+			if (aimposition == 10.f)
+			{
+				aimposition = 10.f;
+			}
+		}
+	}
+
+	{
+		static count = 0;
+		/* Aim Rifle */
+		if (NtUserGetAsyncKeyState(AIMRIFLEKEY) || NtUserGetAsyncKeyState(AIMRIFLEKEY2)) // F1 or C
+		{
+			count++;
+			if (count == 1)
+			{
+				RifleBot = 1;
+				SMGPistolBot = 0;
+				AWPBot = 0;
+				aimposition = 25.f;
+				faimposition = aimposition;
+				aimbot_fov = 50;
+				faimbot_fov = aimbot_fov;
+				aimbot_smooth = 3.f;
+				faimbot_smooth = aimbot_smooth;
+			}
+		}
+		else
+		{
+			count = 0;
+		}
+	}
+
+	{
+		static count = 0;
+		/* Aim Smg */
+		if (NtUserGetAsyncKeyState(AIMSMGPISTOLKEY) || NtUserGetAsyncKeyState(AIMSMGPISTOLKEY2)) // F2 or F
+		{
+			count++;
+			if (count == 1)
+			{
+				RifleBot = 0;
+				SMGPistolBot = 1;
+				AWPBot = 0;
+				aimposition = 25.f;
+				faimposition = aimposition;
+				aimbot_fov = 50;
+				faimbot_fov = aimbot_fov;
+				aimbot_smooth = 2.f;
+				faimbot_smooth = aimbot_smooth;
+			}
+		}
+		else
+		{
+			count = 0;
+		}
+	}
+
+	{
+		static count = 0;
+		/* Aim AWP */
+		if (NtUserGetAsyncKeyState(AIMAWPKEY) || NtUserGetAsyncKeyState(AIMAWPKEY2)) // F3 or V
+		{
+			count++;
+			if (count == 1)
+			{
+				RifleBot = 0;
+				SMGPistolBot = 0;
+				AWPBot = 1;
+				aimposition = 10.f;
+				faimposition = aimposition;
+				aimbot_fov = 100;
+				faimbot_fov = aimbot_fov;
+				aimbot_smooth = 2.f;
+				faimbot_smooth = aimbot_smooth;
 			}
 		}
 		else
@@ -456,94 +565,6 @@ void HandleKeyInputs()
 			{
 				aimposition = 10.f;
 				faimposition = aimposition;
-			}
-		}
-		else
-		{
-			count = 0;
-		}
-	}
-
-	{
-		static count = 0;
-		/* Aim Rifle */
-		if (NtUserGetAsyncKeyState(AIMRIFLEKEY)) // F1
-		{
-			count++;
-			if (count == 1)
-			{
-				NoSpread = 1;
-				NoSpread2 = 0;
-				aimposition = 25.f;
-				faimposition = aimposition;
-				aimbot_fov = 100;
-				aimbot_smooth = 5.f;
-			}
-		}
-		else
-		{
-			count = 0;
-		}
-	}
-
-	{
-		static count = 0;
-		/* Aim Pistol */
-		if (NtUserGetAsyncKeyState(AIMPISTOLKEY)) // F2
-		{
-			count++;
-			if (count == 1)
-			{
-				NoSpread = 0;
-				NoSpread2 = 1;
-				aimposition = 25.f;
-				faimposition = aimposition;
-				aimbot_fov = 100;
-				aimbot_smooth = 3.f;
-			}
-		}
-		else
-		{
-			count = 0;
-		}
-	}
-
-	{
-		static count = 0;
-		/* Aim AWP */
-		if (NtUserGetAsyncKeyState(AIMAWPKEY)) // F3
-		{
-			count++;
-			if (count == 1)
-			{
-				NoSpread = 0;
-				NoSpread2 = 0;
-				aimposition = 10.f;
-				faimposition = aimposition;
-				aimbot_fov = 100;
-				aimbot_smooth = 2.f;
-			}
-		}
-		else
-		{
-			count = 0;
-		}
-	}
-
-	{
-		static count = 0;
-		/* Aim Smg */
-		if (NtUserGetAsyncKeyState(AIMSMGKEY)) // F4
-		{
-			count++;
-			if (count == 1)
-			{
-				NoSpread = 0;
-				NoSpread2 = 1;
-				aimposition = 25.f;
-				faimposition = aimposition;
-				aimbot_fov = 100;
-				aimbot_smooth = 4.f;
 			}
 		}
 		else
