@@ -6,7 +6,8 @@ extern bool bEsp;
 extern bool bAimbot;
 extern bool bOnlyEnemies;
 extern bool RifleBot;
-extern bool SMGPistolBot;
+extern bool SMGBot;
+extern bool PistolBot;
 extern bool AWPBot;
 
 

@@ -19,24 +19,26 @@
 #define AIMBOT_HEAD           aimposition		// Head position (relatively of the player origin)
 #define ESP_BOX_BOTTOM        30.f				// Box bottom position (relatively of the player origin) 
 #define ESP_BOX_TOP           25.f				// Box top position (relatively of the player origin)
-#define AIMRIFLEKEY           0x70      // F1
-#define AIMRIFLEKEY2          0x43      // C
-#define AIMSMGPISTOLKEY       0x71      // F2
-#define AIMSMGPISTOLKEY2      0x46      // F
-#define AIMAWPKEY             0x72      // F3
-#define AIMAWPKEY2            0x56      // V
-#define AIMBOT_TOGGLE_KEY     0x75		// F6
-#define ESP_TOGGLE_KEY        0x76		// F7
-#define ONLY_ENEMIES_KEY      0x77		// F8
-#define NOSPREAD_ONTOGGLE_KEY 0x78		// F9
-#define NOSPREAD_ONTOGGLE_KEY2 0x2E		// DEL
-#define NOSPREAD_OFF_KEY      0x79		// F10
-#define SMOOTH_UP_KEY         0x21		// VK_PRIOR
-#define SMOOTH_DOWN_KEY       0x22		// VK_NEXT
-#define FOV_UP_KEY            0x24		// VK_HOME
-#define FOV_DOWN_KEY          0x23		// VK_END
-#define AIMHEADPOSITIONKEY    0x6D		// VK_SUBTRACT
-#define AIMCHESTPOSITIONKEY   0x6B		// VK_ADD
+#define AIMRIFLEKEY           0x70              // F1
+#define AIMRIFLEKEY2          0x43              // C
+#define AIMPISTOLKEY          0x71              // F2
+#define AIMPISTOLKEY2         0x46              // F
+#define AIMAWPKEY             0x72              // F3
+#define AIMAWPKEY2            0x56              // V
+#define AIMSMGKEY             0x73              // F4
+#define AIMSMGKEY2            0x58              // X
+#define AIMBOT_TOGGLE_KEY     0x75	        	// F6
+#define ESP_TOGGLE_KEY        0x76        		// F7
+#define ONLY_ENEMIES_KEY      0x77	        	// F8
+#define NOSPREAD_ONTOGGLE_KEY 0x78	        	// F9
+#define NOSPREAD_ONTOGGLE_KEY2 0x2E	        	// DEL
+#define NOSPREAD_OFF_KEY      0x79	        	// F10
+#define SMOOTH_UP_KEY         0x21	        	// VK_PRIOR
+#define SMOOTH_DOWN_KEY       0x22	        	// VK_NEXT
+#define FOV_UP_KEY            0x24	        	// VK_HOME
+#define FOV_DOWN_KEY          0x23	        	// VK_END
+#define AIMHEADPOSITIONKEY    0x6D	        	// VK_SUBTRACT
+#define AIMCHESTPOSITIONKEY   0x6B	        	// VK_ADD
 
 
 

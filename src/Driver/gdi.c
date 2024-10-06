@@ -53,12 +53,14 @@ void DrawRect(
 	}
 
 	RECT rect = { x, y, x + w, y + h };
-	FrameRect(hdc, &rect, brush, 1); // with 1 looks better especially when there is many enemies, imo ofc 
+	FrameRect(hdc, &rect, brush, 2); // with 1 looks better especially when there is many enemies, imo ofc 
 	NtUserReleaseDC(hdc);
 	NtGdiDeleteObjectApp(brush);
 }
 
-void DrawFillRect(VOID* hwnd, LONG x, LONG y, LONG w, LONG h, unsigned char r, unsigned char g, unsigned char b)
+void DrawFillRect(
+	VOID* hwnd, LONG x, LONG y, LONG w, LONG h, 
+	unsigned char r, unsigned char g, unsigned char b)
 {
 	if (NtUserGetForegroundWindow() != (HWND)hwnd)
 	{

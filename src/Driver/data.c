@@ -5,7 +5,8 @@ bool bEsp = true;
 bool bAimbot = true;
 bool bOnlyEnemies = true;
 bool RifleBot = false;
-bool SMGPistolBot = false;
+bool SMGBot = false;
+bool PistolBot = false;
 bool AWPBot = false;
 
 
