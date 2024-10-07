@@ -54,10 +54,10 @@ In the end, it’s similar to ekknod's EC cheat but adapted for CS 1.6, because 
 - **F8**: Toggle "Only Enemies" Mode
 - **F9 or DEL**: Toggle "NoSpread" Mode (Fast or Slow slide down)
 - **F10**: Turn OFF NoSpread Mode
-- **Home**: Adjust FOV+  (Default: 50, once key press increase 25)
-- **End**: Adjust FOV- (Minumum: 25, once key press decrease 25)
-- **PgUp**: Adjust Smooth+ (Default: 5, once key press increase 1)
-- **PgDown**: Adjust Smooth- (Minumum: 1, once key press decrease 1)
+- **Home**: Adjust FOV+  (Default: 100, once key press increase 10)
+- **End**: Adjust FOV- (Minumum: 0, once key press decrease 10)
+- **PgUp**: Adjust Smooth+ (Default: 4, once key press increase 1)
+- **PgDown**: Adjust Smooth- (Minumum: 0, once key press decrease 1)
 - **Numpad +**: Aim Position Up
 - **Numpad -**: Aim Position Down
 
