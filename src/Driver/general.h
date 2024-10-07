@@ -20,13 +20,14 @@
 #define ESP_BOX_BOTTOM        30.f				// Box bottom position (relatively of the player origin) 
 #define ESP_BOX_TOP           25.f				// Box top position (relatively of the player origin)
 #define AIMRIFLEKEY           0x70              // F1
-#define AIMRIFLEKEY2          0x43              // C
+// #define AIMRIFLEKEY2       0x43              // C
 #define AIMPISTOLKEY          0x71              // F2
-#define AIMPISTOLKEY2         0x46              // F
+// #define AIMPISTOLKEY2      0x46              // F
 #define AIMAWPKEY             0x72              // F3
-#define AIMAWPKEY2            0x56              // V
+// #define AIMAWPKEY2         0x56              // V
 #define AIMSMGKEY             0x73              // F4
-#define AIMSMGKEY2            0x58              // X
+// #define AIMSMGKEY2         0x58              // X
+#define AIMDEFAULTKEY         0x74              // F5
 #define AIMBOT_TOGGLE_KEY     0x75	        	// F6
 #define ESP_TOGGLE_KEY        0x76        		// F7
 #define ONLY_ENEMIES_KEY      0x77	        	// F8
@@ -37,18 +38,18 @@
 #define SMOOTH_DOWN_KEY       0x22	        	// VK_NEXT
 #define FOV_UP_KEY            0x24	        	// VK_HOME
 #define FOV_DOWN_KEY          0x23	        	// VK_END
-#define AIMHEADPOSITIONKEY    0x6D	        	// VK_SUBTRACT
-#define AIMCHESTPOSITIONKEY   0x6B	        	// VK_ADD
+#define POSITION_UP_KEY       0x6B 	        	// VK_ADD
+#define POSITION_DOWN_KEY     0x6D	        	// VK_SUBTRACT
 
 
 
 static RGB box_color = { 0.0f, 255.0f, 255.0f };
-static float aimbot_smooth = 5.f;
-static float faimbot_smooth = 5.f;
-static int aimbot_fov = 50;
-static int faimbot_fov = 50;
-static float aimposition = 25.f;
-static float faimposition = 25.f;
+static float aimposition = 23.f;
+static float faimposition = 23.f;
+static int aimbot_fov = 100;
+static int faimbot_fov = 100;
+static float aimbot_smooth = 4.f;
+static float faimbot_smooth = 4.f;
 
 /* Global variables */
 static CHAR* gProcessName = "hl.exe";

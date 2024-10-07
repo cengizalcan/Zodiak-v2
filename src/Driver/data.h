@@ -9,6 +9,7 @@ extern bool RifleBot;
 extern bool SMGBot;
 extern bool PistolBot;
 extern bool AWPBot;
+extern bool DefaultBot;
 
 
 

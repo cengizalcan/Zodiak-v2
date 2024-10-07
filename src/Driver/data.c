@@ -4,10 +4,12 @@
 bool bEsp = true;
 bool bAimbot = true;
 bool bOnlyEnemies = true;
+bool DefaultBot = true;
 bool RifleBot = false;
 bool SMGBot = false;
 bool PistolBot = false;
 bool AWPBot = false;
+
 
 
 void DataInitialize() 
