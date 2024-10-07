@@ -1,6 +1,6 @@
 <p align="center"><img src="https://i.imgur.com/7YOOfqF.png" align="center" alt="Zodiak" width="250" align="center"></p>
 
-# Zodiak
+# Zodiak v2
 **Zodiak** is a full kernel driver cheat for CS 1.6. The cheat is designed to leave zero traces in the system to avoid detection, so there are no config files or anything else that could leave a trace.
 
 The ESP is implemented by exporting GDI functions, allowing it to work in CS 1.6. The aimbot is created by exploiting the MouHID driver and callling own `MouseClassServiceCallback`.
