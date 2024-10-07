@@ -30,10 +30,13 @@ In the end, it’s similar to ekknod's EC cheat but adapted for CS 1.6, because 
 - **NoSpread** (Basic and beta version. Held down MOUSE1, aim slowly slide down)
 
 ## Usage
-1) Download zip file and extract.
-2) Open Test ON.bat file and reboot computer.
-3) Open Zodiak.bat file. Hack is activated.
-4) If you want disable test signing mode, open Test OFF.bat file and reboot computer.
+1) Disable antivirus because windows detects kdmapper file as virus.
+2) Download zip file and extract.
+3) Open ESP Fix.reg file under files folder.
+4) Open Test ON.bat file and reboot computer.
+5) For AWP setting, use Zodiak.rc file
+6) Open Zodiak shortcut under main folder. Hack is activated.
+7) If you want disable test signing mode, open Test OFF.bat file and reboot computer.
 
 ## Note
 - This cheat after opened, cannot terminate. You should reboot computer for terminate.
@@ -41,10 +44,11 @@ In the end, it’s similar to ekknod's EC cheat but adapted for CS 1.6, because 
 - For Aim AWP settings, scope mode not working right now. You should use Zodiak.rc configs shoot without scope. (exec Zodiak.rc) (Press F1 key and use MOUSE3 click to shoot with AWP)
 
 ### Default Keybinds
-- **F1 or C Key**: Aim Rifle settings (Max. NoRecoil, Aim Position: Head, MinAimFov: 25, MaxAimFov: 200, MinAimSmooth: 3, MaxAimSmooth: 8)
-- **F2 or F Key**: Pistol settings (Min. NoRecoil, Aim Position: Head, MinAimFov: 100, MaxAimFov: 200, MinAimSmooth: 3, MaxAimSmooth: 4)
-- **F3 or V Key**: AWP settings (No NoRecoil, Aim Position: Chest, AimFov: 100, AimSmooth: 2)
-- **F4 or X Key**: Smg settings (Min. NoRecoil, Aim Position: Head, MinAimFov: 25, MaxAimFov: 200, MinAimSmooth: 3, MaxAimSmooth: 4)
+- **F1**: Aim Rifle settings (Max. NoRecoil, Aim Position: Head, MinAimFov: 30, MaxAimFov: 200, AimSmooth: 3)
+- **F2**: Pistol settings (Min. NoRecoil, Aim Position: Head, MinAimFov: 70, MaxAimFov: 200, AimSmooth: 3)
+- **F3**: AWP settings (No NoRecoil, Aim Position: Chest, AimFov: 100, AimSmooth: 2)
+- **F4**: Smg settings (Min. NoRecoil, Aim Position: Head, MinAimFov: 50, MaxAimFov: 200, MinAimSmooth: 3)
+- **F5**: Default settings (Medium NoRecoil, Aim Position: Head, AimFov: 100, MaxAimSmooth: 4)
 - **F6**: Toggle Aimbot
 - **F7**: Toggle ESP
 - **F8**: Toggle "Only Enemies" Mode
@@ -54,8 +58,8 @@ In the end, it’s similar to ekknod's EC cheat but adapted for CS 1.6, because 
 - **End**: Adjust FOV- (Minumum: 25, once key press decrease 25)
 - **PgUp**: Adjust Smooth+ (Default: 5, once key press increase 1)
 - **PgDown**: Adjust Smooth- (Minumum: 1, once key press decrease 1)
-- **Numpad -**: Aim Head (Default)
-- **Numpad +**: Aim Chest
+- **Numpad +**: Aim Position Up
+- **Numpad -**: Aim Position Down
 
 ## Credits
 - Developer Page: https://github.com/3a1/Zodiak
