@@ -44,22 +44,20 @@ In the end, it’s similar to ekknod's EC cheat but adapted for CS 1.6, because 
 - For Aim AWP settings, scope mode not working right now. You should use Zodiak.rc configs shoot without scope. (exec Zodiak.rc) (Press F1 key and use MOUSE3 click to shoot with AWP)
 
 ### Default Keybinds
-- **F1**: Aim Rifle settings (Max. NoRecoil, Aim Position: Head, MinAimFov: 30, MaxAimFov: 200, AimSmooth: 3)
-- **F2**: Pistol settings (Min. NoRecoil, Aim Position: Head, MinAimFov: 70, MaxAimFov: 200, AimSmooth: 3)
-- **F3**: AWP settings (No NoRecoil, Aim Position: Chest, AimFov: 100, AimSmooth: 2)
-- **F4**: Smg settings (Min. NoRecoil, Aim Position: Head, MinAimFov: 50, MaxAimFov: 200, MinAimSmooth: 3)
-- **F5**: Default settings (Medium NoRecoil, Aim Position: Head, AimFov: 100, MaxAimSmooth: 4)
-- **F6**: Toggle Aimbot
-- **F7**: Toggle ESP
-- **F8**: Toggle "Only Enemies" Mode
-- **F9 or DEL**: Toggle "NoSpread" Mode (Fast or Slow slide down)
-- **F10**: Turn OFF NoSpread Mode
-- **Home**: Adjust FOV+  (Default: 100, once key press increase 10)
-- **End**: Adjust FOV- (Minumum: 0, once key press decrease 10)
-- **PgUp**: Adjust Smooth+ (Default: 4, once key press increase 1)
-- **PgDown**: Adjust Smooth- (Minumum: 0, once key press decrease 1)
-- **Numpad +**: Aim Position Up
-- **Numpad -**: Aim Position Down
+ **F6**: Toggle Aimbot
+ **F7**: Toggle ESP
+ **F8**: Toggle "Only Enemies" Mode
+ **F9 or DEL**: Toggle "NoSpread" Mode (Fast or Slow slide down)
+ **F10 or C**: Aim Rifle and SMG settings (Max. NoRecoil, Aim Position: Head, MinAimFov: 30, MaxAimFov: 100, AimSmooth: 2.5)
+ **F11 or F**: Pistol settings (Disable NoRecoil, Aim Position: Head, MinAimFov: 60, MaxAimFov: 300, AimSmooth: 2.5)
+ **F12 or V**: AWP settings (Disable NoRecoil, Aim Position: Chest, AimFov: 100, MaxAimFov: 300, AimSmooth: 2)
+ **INSERT**: Default settings (Medium NoRecoil, Aim Position: Head and Neck, AimFov: 100, MaxAimSmooth: 4)
+ **Home**: Adjust FOV+ (Default: 100, once key press increase 5)
+ **End**: Adjust FOV- (Minumum: 0, once key press decrease 5)
+ **PgUp**: Adjust Smooth+ (Default: 4, once key press increase 0.5)
+ **PgDown**: Adjust Smooth- (Minumum: 0, once key press decrease 0.5)
+ **Numpad +**: Aim Position Up
+ **Numpad -**: Aim Position Down
 
 ## Credits
 - Developer Page: https://github.com/3a1/Zodiak
