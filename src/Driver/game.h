@@ -1,7 +1,7 @@
 #pragma once
 #include "pch.h"
 
-/* 
+/*
 	Attempt to create something like an sdk for cs 1.6
 	but it turned out more like a wrapper
 */

@@ -5,11 +5,11 @@
 extern bool bEsp;
 extern bool bAimbot;
 extern bool bOnlyEnemies;
-extern bool RifleBot;
-extern bool SMGBot;
+extern bool DefaultBot;
+extern bool AutoBot;
 extern bool PistolBot;
 extern bool AWPBot;
-extern bool DefaultBot;
+
 
 
 
