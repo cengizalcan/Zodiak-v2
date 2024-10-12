@@ -2,6 +2,7 @@
 
 /* Def values */
 bool bEsp = true;
+bool bEspush = false;
 bool bAimbot = true;
 bool bOnlyEnemies = true;
 bool DefaultBot = true;
@@ -81,6 +82,15 @@ void DataLoop()
 			if (bEsp) 
 			{
 				DrawRect((LONG)box.x, (LONG)box.y, (LONG)box.w, (LONG)box.h, (unsigned char)box_color.r, (unsigned char)box_color.g, (unsigned char)box_color.b);
+			}
+
+			/* Drawing esp push key box */
+			if (bEspush)
+			{
+				if (NtUserGetAsyncKeyState(ESP_PUSH_KEY))
+				{
+					DrawRect((LONG)box.x, (LONG)box.y, (LONG)box.w, (LONG)box.h, (unsigned char)box_color.r, (unsigned char)box_color.g, (unsigned char)box_color.b);
+				}
 			}
 		}
 

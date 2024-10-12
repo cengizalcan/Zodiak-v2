@@ -38,6 +38,10 @@
 #define AIMAWPKEY2            0x56              // V
 #define AIMPISTOLKEY2         0x46              // F
 
+#define ESP_PUSH_ONOFF_KEY    0xA1              // VK_ RIGHT_SHIFT
+#define ESP_PUSH_KEY          0xA0              // VK_LEFT_SHIFT
+
+
 
 
 

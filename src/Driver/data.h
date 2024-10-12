@@ -3,6 +3,7 @@
 #include "pch.h"
 
 extern bool bEsp;
+extern bool bEspush;
 extern bool bAimbot;
 extern bool bOnlyEnemies;
 extern bool DefaultBot;

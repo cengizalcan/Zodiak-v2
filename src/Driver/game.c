@@ -246,6 +246,23 @@ void HandleKeyInputs()
 	}
 
 	{
+		/* Esp Push on/off */
+		static count = 0;
+		if (NtUserGetAsyncKeyState(ESP_PUSH_ONOFF_KEY)) // RIGHT SHIFT and use LEFT SHIFT FOR PUSH ESP
+		{
+			count++;
+			if (count == 1)
+			{
+				bEspush = !bEspush;
+			}
+		}
+		else
+		{
+			count = 0;
+		}
+	}
+
+	{
 		/* Only Enemies on/off */
 		static count = 0;
 		if (NtUserGetAsyncKeyState(ONLY_ENEMIES_KEY)) // F8
@@ -312,7 +329,7 @@ void HandleKeyInputs()
 	{
 		if (NtUserGetAsyncKeyState(AIMBOT_KEY)) //MOUSE1
 		{
-			if (aimbot_fov < 100)
+			if (aimbot_fov < 60)
 			{
 				aimbot_fov += 5;
 			}
@@ -324,7 +341,7 @@ void HandleKeyInputs()
 			{
 				if (aimposition > -20.f)
 				{
-					aimposition -= 1.f;
+					aimposition -= 2.f;
 				}
 			}
 			aimbot_smooth = faimbot_smooth;
@@ -336,20 +353,32 @@ void HandleKeyInputs()
 		}
 	}
 
+	/* Pistol SMG Bot Active */
 	if (PistolBot)
 	{
 		if (NtUserGetAsyncKeyState(AIMBOT_KEY)) //MOUSE1
 		{
-			if (aimbot_fov < 300)
+			if (aimbot_fov < 100)
 			{
 				aimbot_fov += 5;
 			}
-			aimposition = faimposition;
+			if (aimposition > 15.f)
+			{
+				aimposition -= 0.25f;
+			}
+			else
+			{
+				if (aimposition > 0.f)
+				{
+					aimposition -= 0.5f;
+				}
+			}
 			aimbot_smooth = faimbot_smooth;
 		}
 		else
 		{
 			aimbot_fov = faimbot_fov;
+			aimposition = faimposition;
 		}
 	}
 
@@ -358,7 +387,7 @@ void HandleKeyInputs()
 	{
 		if (NtUserGetAsyncKeyState(AIMBOT_KEY)) //MOUSE1
 		{
-			if (aimbot_fov < 300)
+			if (aimbot_fov < 100)
 			{
 				aimbot_fov += 5;
 			}
@@ -383,11 +412,11 @@ void HandleKeyInputs()
 				PistolBot = false;
 				AWPBot = false;
 				DefaultBot = true;
-				aimposition = 20.f;
+				aimposition = 22.5f;
 				faimposition = aimposition;
 				aimbot_fov = 100;
 				faimbot_fov = aimbot_fov;
-				aimbot_smooth = 4.f;
+				aimbot_smooth = 2.5f;
 				faimbot_smooth = aimbot_smooth;
 			}
 		}
@@ -435,9 +464,9 @@ void HandleKeyInputs()
 				PistolBot = true;
 				AWPBot = false;
 				DefaultBot = false;
-				aimposition = 25.f;
+				aimposition = 22.5f;
 				faimposition = aimposition;
-				aimbot_fov = 60;
+				aimbot_fov = 50;
 				faimbot_fov = aimbot_fov;
 				aimbot_smooth = 2.5f;
 				faimbot_smooth = aimbot_smooth;
@@ -463,7 +492,7 @@ void HandleKeyInputs()
 				DefaultBot = false;
 				aimposition = 10.f;
 				faimposition = aimposition;
-				aimbot_fov = 60;
+				aimbot_fov = 50;
 				faimbot_fov = aimbot_fov;
 				aimbot_smooth = 2.f;
 				faimbot_smooth = aimbot_smooth;
